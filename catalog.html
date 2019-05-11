@@ -10,6 +10,12 @@
     <header class="main-header">
 
         <nav class="main-navigation">
+            <section class="logo-block">
+                <h2 class="visually-hidden">Логотип</h2>
+                <a href="#">
+                    <img src="img/device-logo.png" alt="Интернет-магазин гаджетов - Device" width="163" height="35">
+                </a>
+            </section>
             <section class="user-block">
                 <h2 class="visually-hidden">Навигация пользователя</h2>
                 <!--Форма поиска-->
@@ -19,10 +25,11 @@
 
                 <ul class="user-navigation">
                     <li>
-                        <a href="#">Войти</a>
+                        <a href="#">Выйти</a>
                     </li>
-                    <li class="user-navigation-current">
-                        <a href="#">Валентин Петухов</a>
+
+                    <li>
+                        <a href="#" class="user-navigation-current">Валентин Петухов</a>
                     </li>
                 </ul>
 
@@ -105,6 +112,84 @@
             </li>
         </ul>
 
+        <section class="filter">
+            <h2 class="visually-hidden">Фильтр:</h2>
+            <form method="GET" action="https://echo.htmlacademy.ru">
+                <label for="filter-range">Стоимость:</label>
+                <input type="range" min="0" max="15000" id="filter-range" name="Range">
+
+                <label for="range-from">От</label>
+                <input type="number" id="range-from" name="From">
+
+                <label for="range-before">До</label>
+                <input type="number" id="range-before" name="Before">
+
+                <fieldset>
+                    <legend>Цвет</legend>
+                    <ul class="form-color">
+                        <li>
+                            <label for="filter-black">Черный</label>
+                            <input type="checkbox" class="visually-hidden" id="filter-black" name="black">
+                        </li>
+
+                        <li>
+                            <label for="filter-white">Белый</label>
+                            <input type="checkbox" class="visually-hidden" id="filter-white" name="white">
+                        </li>
+
+                        <li>
+                            <label for="filter-blue">Синий</label>
+                            <input type="checkbox" class="visually-hidden" id="filter-blue" name="blue">
+                        </li>
+
+                        <li>
+                            <label for="filter-red">Красный</label>
+                            <input type="checkbox" class="visually-hidden" id="filter-red" name="red">
+                        </li>
+
+                        <li>
+                            <label for="filter-pink">Розовый</label>
+                            <input type="checkbox" class="visually-hidden" id="filter-pink" name="pink">
+                        </li>
+                    </ul>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Bluetooth</legend>
+                    <label for="yes-availability">Есть</label>
+                    <input type="radio" id="yes-availability" name="Availability" class="visually-hidden">
+
+                    <label for="no-availability">Нет</label>
+                    <input type="radio" id="no-availability" name="Availability" class="visually-hidden">
+                </fieldset>
+            </form>
+        </section>
+
+        <section class="sort-navigation">
+            <h2>Сортировка</h2>
+            <ul class="sort-list">
+                <li>
+                    <a href="#" class="sort-item-current">По цене</a>
+                </li>
+
+                <li>
+                    <a href="#">По типу</a>
+                </li>
+
+                <li>
+                    <a href="#">По популярности</a>
+                </li>
+
+                <li>
+                    <a href="#">По возрастанию</a>
+                </li>
+
+                <li>
+                    <a href="#" class="sort-item-current">По убыванию</a>
+                </li>
+            </ul>
+        </section>
+
         <section class="selfie-catalog">
             <ul class="selfie-catalog-list">
                 <li>
@@ -144,6 +229,31 @@
                 </li>
             </ul>
         </section>
+
+        <section class="pagination">
+            <h2 class="visually-hidden">Страницы</h2>
+            <ul class="pagination-list">
+                <li>
+                    <a href="#">Назад</a>
+                </li>
+
+                <li>
+                    <a href="#">1</a>
+                </li>
+
+                <li>
+                    <a href="#">2</a>
+                </li>
+
+                <li>
+                    <a href="#">3</a>
+                </li>
+
+                <li>
+                    <a href="#">Вперед</a>
+                </li>
+            </ul>
+        </section>
     </main>
 
 
@@ -155,7 +265,11 @@
             </a>
             <ul class="user-navigation">
                 <li>
-                    <a href="#">Войти</a>
+                    <a href="#">Выйти</a>
+                </li>
+
+                <li>
+                    <a href="#" class="user-navigation-current">Валентин Петухов</a>
                 </li>
             </ul>
 
