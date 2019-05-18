@@ -17,10 +17,8 @@
       </section>
       <section class="user-block">
         <h2 class="visually-hidden">Навигация пользователя</h2>
-        <!--Форма поиска-->
         <label for="header-search" class="visually-hidden">Поиск по сайту</label>
-        <input type="search" id="header-search" placeholder="Поиск по сайту">
-
+        <input type="search" id="header-search" name="search" placeholder="Поиск по сайту">
 
         <ul class="user-navigation">
           <li>
@@ -215,27 +213,27 @@
       </ul>
     </section>
 
-    <section class="">
+    <section class="shipper">
       <h2 class="visually-hidden">Поставщики</h2>
       <ul class="shipper-list">
         <li class="shipper-item">
           <a href="#">
-            <img src="img/dji.png" width="260" height="100" alt="Поставщик DJI">
+            <img src="img/dji.jpg" width="260" height="100" alt="Поставщик DJI">
           </a>
         </li>
         <li class="shipper-item">
           <a href="#">
-            <img src="img/spgadgets.png" width="260" height="100" alt="Поставщик SP Gadgets">
+            <img src="img/spgadgets.jpg" width="260" height="100" alt="Поставщик SP Gadgets">
           </a>
         </li>
         <li class="shipper-item">
           <a href="#">
-            <img src="img/gopro.png" width="260" height="100" alt="Поставщик GoPro">
+            <img src="img/gopro.jpg" width="260" height="100" alt="Поставщик GoPro">
           </a>
         </li>
         <li class="shipper-item">
           <a href="#">
-            <img src="img/vive.png" width="260" height="100" alt="Поставщик VIVE">
+            <img src="img/vive.jpg" width="260" height="100" alt="Поставщик VIVE">
           </a>
         </li>
       </ul>
@@ -334,6 +332,34 @@
       </ul>
     </section>
   </footer>
+
+  <section class="write-us">
+    <h2 class="visually-hidden">Обратная связь</h2>
+    <form method="POST" echo="https://echo.htmlacademy.ru">
+      <button type="button">Закрыть</button>
+    <div>
+      <label for="write-us-name">Ваше имя:</label>
+      <input type="text" id="write-us-name" name="name" placeholder="Имя Фамилия">
+    </div>
+
+    <div>
+      <label for="write-us-email">Ваш e-mail:</label>
+      <input type="email" id="write-us-email" name="email" placeholder="email@example.com">
+    </div>
+
+    <div>
+      <label for="write-us-comment">Текст письма:</label>
+      <textarea id="write-us-comment" placeholder="В свободной форме" name="comment"></textarea>
+    </div>
+    <button type="submit">Отправить</button>
+  </form>
+  </section>
+
+  <section class="map">
+    <h2 class="visually-hidden">Наш адрес</h2>
+    <button type="button">Закрыть</button>
+    <img src="img/map.jpg" alt="Мы находимся по адресу улица Строителей д. 15">
+  </section>
 </body>
 
 </html>
