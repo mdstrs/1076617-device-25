@@ -3,7 +3,9 @@
 
 <head>
   <meta charset="utf-8">
-  <link href="style.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400&display=swap&subset=cyrillic" rel="stylesheet">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
   <title>HTML Academy: Девайс</title>
 </head>
 
@@ -13,11 +15,13 @@
     <nav class="main-navigation">
       <section class="logo-block">
         <h2 class="visually-hidden">Логотип</h2>
-        <a href="#" class="test">Device</a>
+        <a href="#">
+          <img src="img/header-logo.svg" width="163" height="35" alt="Логотип интернет-магазина Device">
+        </a>
       </section>
       <section class="user-block">
         <h2 class="visually-hidden">Навигация пользователя</h2>
-        <label for="header-search" class="visually-hidden">Поиск по сайту</label>
+        <label for="header-search" class="visually-hidden header-search">Поиск по сайту</label>
         <input type="search" id="header-search" name="search" placeholder="Поиск по сайту">
 
         <ul class="user-navigation">
@@ -155,43 +159,51 @@
           </tr>
         </table>
       </section>
+      <section class="switch-sliders">
+        <h2 class="visually-hidden">Переключатель слайдов</h2>
+        <button class="slider-btn">Первый слайд</button>
+        <button class="slider-btn">Второй слайд</button>
+        <button class="slider-btn">Третий слайд</button>
+      </section>
     </section>
 
     <section class="catalog">
       <h2 class="visually-hidden">Каталог товаров</h2>
       <ul class="catalog-list">
+
         <li>
-          <a href="#">Виртуальная реальность</a>
+          <a class="catalog-item catalog-item-vr" href="#">Виртуальная реальность</a>
         </li>
 
         <li>
-          <a href="#">Моноподы для селфи</a>
+          <a class="catalog-item catalog-item-monopods" href="#">Моноподы для селфи</a>
         </li>
 
         <li>
-          <a href="#">Экшн-камеры</a>
+          <a class="catalog-item catalog-item-action" href="#">Экшн-камеры</a>
         </li>
 
         <li>
-          <a href="#">Фитнес-браслеты</a>
+          <a class="catalog-item catalog-item-fb" href="#">Фитнес-браслеты</a>
         </li>
 
         <li>
-          <a href="#">Умные часы</a>
+          <a class="catalog-item catalog-item-cw" href="#">Умные часы</a>
         </li>
 
         <li>
-          <a href="#">Квадрокоптеры</a>
+          <a class="catalog-item catalog-item-kw" href="#">Квадрокоптеры</a>
         </li>
 
       </ul>
     </section>
 
+
     <section class="services">
       <h2 class="visually-hidden">Сервисы</h2>
       <ul class="services-list">
         <li class="services-item">
-          Доставка
+          <button class="btn">Доставка</button>
           <h3>Доставка</h3>
           <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо
             заработаем, поднимая его на ваш этаж.</p>
@@ -257,7 +269,7 @@
       <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое
         бывает.</p>
       <img src="img/map.jpg" alt="Наше месторасположение" width="560" height="222">
-      <a class="btn">Напишите нам</a>
+      <a href="#" class="btn">Напишите нам</a>
     </section>
 
   </main>
@@ -265,7 +277,9 @@
   <footer class="main-footer">
     <section class="footer-nav">
       <h2 class="visually-hidden">Навигация по подвалу сайта</h2>
-      <a href="#">Device</a>
+      <a href="#">
+        <img src="img/footer-logo.svg" width="163" height="35" alt="Логотип интернет-магазина Device">
+      </a>
       <ul class="user-navigation">
         <li>
           <a href="#">Войти</a>
@@ -337,22 +351,24 @@
     <h2 class="visually-hidden">Обратная связь</h2>
     <form method="POST" echo="https://echo.htmlacademy.ru">
       <button type="button">Закрыть</button>
-    <div>
-      <label for="write-us-name">Ваше имя:</label>
-      <input type="text" id="write-us-name" name="name" placeholder="Имя Фамилия">
-    </div>
+      <div class="wrapper">
+        <DIV>
+          <label for="write-us-name">Ваше имя:</label><br>
+          <input type="text" id="write-us-name" name="name" placeholder="Имя Фамилия">
+        </div>
 
-    <div>
-      <label for="write-us-email">Ваш e-mail:</label>
-      <input type="email" id="write-us-email" name="email" placeholder="email@example.com">
-    </div>
+        <div>
+          <label for="write-us-email">Ваш e-mail:</label><br>
+          <input type="email" id="write-us-email" name="email" placeholder="email@example.com">
+        </div>
+      </div>
 
-    <div>
-      <label for="write-us-comment">Текст письма:</label>
-      <textarea id="write-us-comment" placeholder="В свободной форме" name="comment"></textarea>
-    </div>
-    <button type="submit">Отправить</button>
-  </form>
+      <div>
+        <label for="write-us-comment">Текст письма:</label><br>
+        <textarea id="write-us-comment" placeholder="В свободной форме" name="comment"></textarea>
+      </div>
+      <button type="submit" class="btn">Отправить</button>
+    </form>
   </section>
 
   <section class="map">
