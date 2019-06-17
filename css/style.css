@@ -1,25 +1,33 @@
 @font-face {
   font-family: "Gilroy Light";
 
-  src: local("Gilroy Light"), url(../fonts/Gilroylight.ttf);
+  src: url("../fonts/OpenSans-Light.ttf"),
+  url("../fonts/web/gilroylight.woff"),
+  url("../fonts/web/gilroylight.woff2");
 }
 
 @font-face {
   font-family: "Gilroy ExtraBold";
 
-  src: local("Gilroy ExtraBold"), url(../fonts/Gilroyextrabold.ttf);
+  src: url("../fonts/Gilroyextrabold.ttf"),
+  url("../fonts/web/gilroyextrabold.woff"),
+  url("../fonts/web/gilroyextrabold.woff2");
 }
 
 @font-face {
   font-family: "OpenSans-Reg";
 
-  src: local("OpenSans-Reg"), url(../fonts/OpenSans-Regular.ttf);
+  src: url("../fonts/OpenSans-Regular.ttf"),
+  url("../fonts/web/opensans.woff"),
+  url("../fonts/web/opensans.woff2");
 }
 
 @font-face {
   font-family: "OpenSans-Light";
 
-  src: local("OpenSans-Light"), url(../fonts/OpenSans-Light.ttf);
+  src: url("../fonts/OpenSans-Light.ttf"),
+  url("../fonts/web/opensanslight.woff"),
+  url("../fonts/web/opensanslight.woff2");
 }
 
 /*Глобальные стили*/
