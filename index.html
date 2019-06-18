@@ -39,7 +39,7 @@
                 <a class="login-link" href="#">Войти</a>
               </li>
 
-          
+
             </ul>
 
             <ul class="shop-navigation">
@@ -144,7 +144,7 @@
               Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.
             </p>
 
-            <a class="btn" href="#"><span>Подробнее</span></a>
+            <a class="btn" href="#">Подробнее</a>
 
             <table class="slider-table">
               <tr>
@@ -273,57 +273,78 @@
           </div>
         </ul>
       </section>
+    </div>
+
+    <section class="services">
+      <h2 class="visually-hidden">Наши услуги</h2>
+      <div class="container">
+        <aside class="services-check">
+
+          <input type="radio" id="delivery-button" class="delivery-button visually-hidden" name="services-radio" checked>
+          <label for="delivery-button" class="btn btn-1">Доставка</label>
+
+          <input type="radio" id="guarantee-button" class="guarantee-button visually-hidden" name="services-radio">
+          <label for="guarantee-button" class="btn btn-2">Гарантия</label>
+
+          <input type="radio" id="credit-button" class="credit-button visually-hidden" name="services-radio">
+          <label for="credit-button" class="btn btn-3">Кредит</label>
 
 
-      <section class="services">
-        <h2 class="visually-hidden">Сервисы</h2>
-        <div class="wrapper">
+        </aside>
 
-          <section class="services-button">
-            <button type="button" class="services-btn services-btn-current">Доставка</button>
-            <button type="button" class="btn"><span>Доставка</span></button>
-            <button type="button" class="btn"><span>Доставка</span></button>
+        <section class="services-description">
+          <h2 class="visually-hidden">Описание услуг</h2>
+          <section class="description-item delivery">
+            <h3>Доставка</h3>
+            <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо
+              заработаем, поднимая его на ваш этаж.</p>
           </section>
 
-          <div class="services-decoration">
+          <section class="description-item guarantee">
+            <h3>Гарантия</h3>
+            <p>Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый.
+              Товар, не дом, конечно же.</p>
+          </section>
 
-          </div>
+          <section class="description-item credit">
+            <h3>Кредит</h3>
+            <p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные
+              условия кредита. Выгодные для нашего банка, разумеется.</p>
+          </section>
+        </section>
+      </div>
+    </section>
 
-          <ul class="services-description-list">
-            <li class="services-description-item">
-              <h3>Доставка</h3>
-              <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо
-                заработаем, поднимая его на ваш этаж.</p>
-            </li>
-          </ul>
-        </div>
-
-      </section>
-
+    <div class="container">
       <section class="shipper">
         <h2 class="visually-hidden">Поставщики</h2>
 
         <ul class="shipper-list">
+
           <li class="shipper-item">
             <a href="#">
-              <img src="img/dji.jpg" width="260" height="100" alt="Поставщик DJI">
+              <img src="img/dji-gray.jpg" width="260" height="100" alt="Поставщик DJI">
             </a>
           </li>
+
           <li class="shipper-item">
             <a href="#">
-              <img src="img/spgadgets.jpg" width="260" height="100" alt="Поставщик SP Gadgets">
+              <img src="img/sp-gadgets-gray.jpg" width="260" height="100" alt="Поставщик SP Gadgets">
             </a>
           </li>
+
           <li class="shipper-item">
             <a href="#">
-              <img src="img/gopro.jpg" width="260" height="100" alt="Поставщик GoPro">
+              <img src="img/gopro-gray.jpg" width="260" height="100" alt="Поставщик GoPro">
             </a>
           </li>
+
           <li class="shipper-item">
             <a href="#">
-              <img src="img/vive.jpg" width="260" height="100" alt="Поставщик VIVE">
+              <img src="img/vive-gray.jpg" width="260" height="100" alt="Поставщик VIVE">
             </a>
           </li>
+
         </ul>
 
       </section>
@@ -331,7 +352,7 @@
       <section class="about-us-block">
         <div class="wrapper">
           <section class="about-us">
-            <div class="decoration"></div>
+            
             <h2>О нас</h2>
             <p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
 
@@ -344,19 +365,19 @@
               <li class="about-us-item">ЖелДорЭкспедиция</li>
             </ul>
 
-            <a class="btn" href="#"><span>Подробнее о нас</span></a>
+            <a class="btn" href="#">Подробнее о нас</a>
 
           </section>
 
           <section class="contacts">
-            <div class="decoration"></div>
+        
             <h2>Контакты</h2>
             <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки.
               Всякое
               бывает.</p>
             <img class="contacts-map" src="img/map.jpg" alt="Наше месторасположение" width="560" height="222">
             <a href="#" class="btn">
-              <span>Напишите нам</span>
+              Напишите нам
             </a>
 
           </section>
@@ -394,9 +415,9 @@
         </ul>
 
         <ul class="footer-social">
-          <li class="footer-social-btn footer-social-btn__fb">Facebook</li>
-          <li class="footer-social-btn footer-social-btn__inst">Instagramm</li>
-          <li class="footer-social-btn footer-social-btn__twitter">Twitter</li>
+          <li class="footer-social-btn footer-social-btn__fb"><a href="#">Facebook</a></li>
+          <li class="footer-social-btn footer-social-btn__inst"><a href="#">Instagramm</a></li>
+          <li class="footer-social-btn footer-social-btn__twitter"><a href="#">Twitter</a></li>
         </ul>
 
       </section>
@@ -423,7 +444,7 @@
         <span class="footer-adress">Тел.: +7 (495) 495-95-95</span>
 
         <ul class="footer-copyright">
-          <li class="footer-copyright-item">HTML Academy</li>
+          <li class="footer-copyright-item"><a href="https://htmlacademy.ru/">HTML Academy</a></li>
         </ul>
 
       </section>
