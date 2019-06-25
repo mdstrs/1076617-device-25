@@ -1116,6 +1116,14 @@ input[type="radio"].visually-hidden {
   letter-spacing: 0.16px;
 }
 
+/*
+==================
+Внутренняя страница (каталог)
+
+Контентная часть
+(Пагинация)
+==================
+*/
 
 .catalog-pagination {
   display: flex;
@@ -1159,15 +1167,12 @@ input[type="radio"].visually-hidden {
   opacity: 1;
 }
 
-
-
-/*====================
- SLIDER
-=====================*/
-
-/*====================
+/*
+==================
+Слайдер
 Общие стили
-=====================*/
+==================
+*/
 
 .slider {
   position: relative;
@@ -1277,9 +1282,12 @@ input[type="radio"].visually-hidden {
 }
 
 
-/*====================
-Стили слайдер-1
-=====================*/
+/*
+==================
+Слайдер
+Стили слайдер 01
+==================
+*/
 
 .slider-1 {
   position: absolute;
@@ -1343,9 +1351,13 @@ input[type="radio"].visually-hidden {
 }
 
 
-/*==================
-Стили слайдер-2
-===================*/
+/*
+==================
+Слайдер
+Стили слайдер 02
+==================
+*/
+
 
 .slider-2 {
   position: absolute;
@@ -1380,9 +1392,12 @@ input[type="radio"].visually-hidden {
   margin-left: -3px;
 }
 
-/*================
-Стили слайдер-3
-==================*/
+/*
+==================
+Слайдер
+Стили слайдер 03
+==================
+*/
 
 .slider-3 {
   position: absolute;
@@ -1439,7 +1454,12 @@ input[type="radio"].visually-hidden {
   padding-left: 10px;
 }
 
-/*Каталог*/
+/*
+==================
+Каталог 
+(Второе меню в index.html)
+==================
+*/
 
 .index-catalog-list {
   display: flex;
@@ -1450,7 +1470,6 @@ input[type="radio"].visually-hidden {
 
   list-style: none;
 }
-
 
 .index-catalog-list a {
   position: relative;
@@ -1577,7 +1596,13 @@ input[type="radio"].visually-hidden {
   height: 245px;
 }
 
-/*Услуги*/
+/*
+==================
+Услуги
+Общие стили
+==================
+*/
+
 .services {
   position: relative;
 
@@ -1596,9 +1621,13 @@ input[type="radio"].visually-hidden {
   width: 1160px;
 }
 
-/*==========
+/*
+==================
+Услуги
 Кнопки
-==========*/
+==================
+*/
+
 
 .services-check {
   position: relative;
@@ -1671,9 +1700,14 @@ input[type="radio"].visually-hidden {
   background-color: #000000;
   transform: translate(-50%, -50%);
 }
-/*==================
-Общие стили слайдера
-================*/
+
+/*
+==================
+Услуги 
+Общиие стили слайдера
+==================
+*/
+
 .services-description h3 {
   margin-bottom: 30px;
 
@@ -1694,9 +1728,13 @@ input[type="radio"].visually-hidden {
   letter-spacing: 0.2px;
 }
 
-/*============
-Доставка
-==========*/
+/*
+==================
+Услуги
+Стили слайдера доставки
+==================
+*/
+
 
 .services .delivery {
   display: block;
@@ -1713,10 +1751,13 @@ input[type="radio"].visually-hidden {
   left: 556px;
 }
 
+/*
+==================
+Услуги
+Стили слайдера гарантии
+==================
+*/
 
-/*================
-Гарантия
-==============*/
 .services .guarantee {
   display: none;
 }
@@ -1730,10 +1771,10 @@ input[type="radio"].visually-hidden {
 
 /*
 ==================
-Название блока
+Услуги
+Стили слайдера кредита
 ==================
 */
-
 
 .services .credit {
   display: none;
@@ -1750,6 +1791,12 @@ input[type="radio"].visually-hidden {
   width: 430px;
   padding: 0;
 }
+
+/*
+==================
+Поставщики
+==================
+*/
 
 .shipper-list {
   z-index: -1;
@@ -1786,6 +1833,13 @@ input[type="radio"].visually-hidden {
 
   background-image: url(../img/vive.jpg);
 }
+
+/*
+==================
+Блок о нас
+Общие стили
+==================
+*/
 
 .about-us-block {
   margin-bottom: 82px;
@@ -1836,6 +1890,13 @@ input[type="radio"].visually-hidden {
   color: #464646;
 }
 
+/*
+==================
+Блок о нас
+Стили левой части
+==================
+*/
+
 .about-us {
   width: 462px;
   margin-right: 136px;
@@ -1872,6 +1933,13 @@ input[type="radio"].visually-hidden {
   left: -34px;
 }
 
+/*
+==================
+Блок о нас
+Стили правой части
+==================
+*/
+
 .contacts h2::before {
   left: 3px;
 }
@@ -1904,6 +1972,13 @@ input[type="radio"].visually-hidden {
   margin-left: 2px;
 }
 
+/*
+==================
+Футер
+Общие стили
+==================
+*/
+
 .main-footer {
   background-color: #464646;
 }
@@ -1912,6 +1987,13 @@ input[type="radio"].visually-hidden {
   width: 1160px;
   margin: 0 auto;
 }
+
+/*
+==================
+Футер
+Верхняя часть
+==================
+*/
 
 .footer-nav {
   display: flex;
@@ -1923,8 +2005,6 @@ input[type="radio"].visually-hidden {
 .footer-nav .nav-logo {
   padding-top: 20px;
 }
-
-
 
 .main-footer .nav-logo {
   margin-right: auto;
@@ -2005,6 +2085,13 @@ input[type="radio"].visually-hidden {
   opacity: 0.3;
 }
 
+/*
+==================
+Футер
+Средняя часть
+==================
+*/
+
 .footer-info {
   display: flex;
   justify-content: space-between;
@@ -2056,7 +2143,12 @@ input[type="radio"].visually-hidden {
   color: #ffffff;
 }
 
-
+/*
+==================
+Футер
+Нижняя часть
+==================
+*/
 
 .footer-copyright {
   display: flex;
@@ -2096,6 +2188,13 @@ input[type="radio"].visually-hidden {
 .copyright-btn-list a:active {
   opacity: 0.3;
 }
+
+/*
+==================
+Попап
+Напишите нам
+==================
+*/
 
 .write-us {
   position: fixed;
@@ -2246,6 +2345,12 @@ input[type="radio"].visually-hidden {
   margin-bottom: 79px;
 }
 
+/*
+==================
+Попап
+Карта
+==================
+*/
 
 .map {
   position: fixed;
@@ -2300,8 +2405,6 @@ input[type="radio"].visually-hidden {
 .map .close-btn::after {
   transform: rotate(-45deg);
 }
-
-
 
 .map .close-btn:hover:before {
   width: 2px;
