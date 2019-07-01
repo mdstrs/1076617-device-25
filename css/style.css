@@ -632,7 +632,7 @@ input[type="radio"].visually-hidden {
   */
 
 .catalog-header {
-  background-image: linear-gradient(to right,#dcdcdc 0,#dcdcdc 28%,#ebebeb 28%,#ebebeb 100%);
+  background-image: linear-gradient(to right, #dcdcdc 0, #dcdcdc calc(50% - 565px),#ebebeb calc(50% - 580px),#ebebeb 100%);
 }
 
 .catalog-header .wrapper {
@@ -767,7 +767,7 @@ input[type="radio"].visually-hidden {
   ==================
   */
 .catalog-main {
-  background-image: linear-gradient(to right,#eeeeee 0,#eeeeee 28%,#ffffff 28%,#ffffff 100%);
+  background-image: linear-gradient(to right,#eeeeee 0,#eeeeee calc(50% - 565px),#ffffff calc(50% - 580px),#ffffff 100%);
 }
 
 .catalog-main .wrapper {
