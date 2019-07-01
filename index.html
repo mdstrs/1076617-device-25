@@ -8,6 +8,8 @@
   <title>HTML Academy: Девайс</title>
 </head>
 
+
+
 <body>
   <header class="main-header">
 
@@ -141,21 +143,21 @@
       <section class="slider">
         <div class="container">
           <h2 class="visually-hidden">Популярные товары</h2>
-  
 
-          
+
+
           <input type="radio" id="product-1" class="product-1 visually-hidden" name="toggle" checked>
-          
-          <input type="radio" id="product-2" class="product-2 visually-hidden" name="toggle" checked>
-          
-          <input type="radio" id="product-3" class="product-3 visually-hidden" name="toggle" checked>
-          
+
+          <input type="radio" id="product-2" class="product-2 visually-hidden" name="toggle">
+
+          <input type="radio" id="product-3" class="product-3 visually-hidden" name="toggle">
+
           <aside class="slider-controls">
-              <label for="product-1" class="slider-controls-item slider-controls-item--1">Первый</label>
-              <label for="product-2" class="slider-controls-item slider-controls-item--2">Первый</label>
-              <label for="product-3" class="slider-controls-item slider-controls-item--3">Первый</label>
-            </aside>
-              
+            <label for="product-1" class="slider-controls-item slider-controls-item--1">Первый</label>
+            <label for="product-2" class="slider-controls-item slider-controls-item--2">Первый</label>
+            <label for="product-3" class="slider-controls-item slider-controls-item--3">Первый</label>
+          </aside>
+
 
 
           <ul class="slider-list">
@@ -172,7 +174,7 @@
                   Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.
                 </p>
 
-                <a class="btn" href="#">Подробнее</a>
+                <a class="btn" href="catalog.html">Подробнее</a>
 
                 <table class="slider-table">
                   <tr>
@@ -303,44 +305,41 @@
     <section class="services">
       <h2 class="visually-hidden">Наши услуги</h2>
       <div class="container">
+
+
+        <input type="radio" id="delivery-button" class="delivery-button visually-hidden" name="services-radio" checked>
+        <input type="radio" id="guarantee-button" class="guarantee-button visually-hidden" name="services-radio">
+        <input type="radio" id="credit-button" class="credit-button visually-hidden" name="services-radio">
+
         <aside class="services-check">
-
-          <input type="radio" id="delivery-button" class="delivery-button visually-hidden" name="services-radio"
-            checked>
-          <label for="delivery-button" class="btn btn-1">Доставка</label>
-
-          <input type="radio" id="guarantee-button" class="guarantee-button visually-hidden" name="services-radio">
+          <label for="delivery-button" class="btn btn-1 ">Доставка</label>
           <label for="guarantee-button" class="btn btn-2">Гарантия</label>
-
-          <input type="radio" id="credit-button" class="credit-button visually-hidden" name="services-radio">
           <label for="credit-button" class="btn btn-3">Кредит</label>
-
-
         </aside>
 
-        <section class="services-description">
-          <h2 class="visually-hidden">Описание услуг</h2>
-          <section class="description-item delivery">
+     <ul class="services-description">
+
+          <li class="description-item delivery">
             <h3>Доставка</h3>
             <p class="description-delivery">Мы с удовольствием доставим ваш товар прямо к вашему подъезду
               совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его
               на ваш этаж.</p>
-          </section>
+          </li>
 
-          <section class="description-item guarantee">
+          <li class="description-item guarantee">
             <h3>Гарантия</h3>
             <p>Если из-за возгорания купленного у нас товара у вас сгорит дом
               &mdash; не переживайте, мы выдадим вам новый.
               <br>Товар, не дом, конечно же.</p>
-          </section>
+          </li>
 
-          <section class="description-item credit">
+          <li class="description-item credit">
             <h3>Кредит</h3>
             <p class="description-credit">Залезть в долговую яму стало проще! Кредитные консультанты
               подберут для вас наиболее выгодные условия кредита.
               Выгодные для нашего банка, разумеется.</p>
-          </section>
-        </section>
+          </li>
+        </ul>
       </div>
     </section>
 
@@ -404,8 +403,16 @@
             <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки.
               Всякое
               бывает.</p>
-            <img class="contacts-map" src="img/map.jpg" alt="Наше месторасположение" width="560" height="222">
-            <a href="#" class="btn">
+             
+            <a href="map.html" class="contacts-map-btn">
+           
+               
+              
+              <img class="contacts-map" src="img/map.jpg" alt="Наше месторасположение" width="560" height="222">
+              
+            </a>
+  
+            <a href="#" class="btn write-us-button">
               Напишите нам
             </a>
 
@@ -534,18 +541,18 @@
 
         <div class="wrapper">
           <DIV class="write-us-name">
-            <input type="text" id="write-us-name" name="name" placeholder="Имя Фамилия">
+            <input type="text" id="write-us-name" name="popup-name" placeholder="Имя Фамилия">
             <label for="write-us-name">Ваше имя:</label>
           </div>
 
           <div class="write-us-email">
-            <input type="email" id="write-us-email" name="email" placeholder="email@example.com">
+            <input type="email" id="write-us-email" name="popup-email" placeholder="email@example.com">
             <label for="write-us-email">Ваш e-mail:</label><br>
           </div>
         </div>
 
         <div class="write-us-comment">
-          <textarea id="write-us-comment" placeholder="В свободной форме" name="comment"></textarea>
+          <textarea id="write-us-comment" placeholder="В свободной форме" name="popup-text"></textarea>
           <label for="write-us-comment">Текст письма:</label>
         </div>
         <button type="submit" class="btn"><span>Отправить</span></button>
@@ -553,11 +560,98 @@
     </div>
   </section>
 
+
   <section class="map">
     <h2 class="visually-hidden">Наш адрес</h2>
     <button type="button" class="close-btn"><span class="visually-hidden">Закрыть</span></button>
-    <img src="img/map-big.jpg.png" width="960" height="559" alt="Мы находимся по адресу улица Строителей д. 15">
+    <iframe src="https://yandex.ru/map-widget/v1/-/CBFye-vHTC" width="960" height="559" frameborder="1"
+      allowfullscreen="true"></iframe>
+    <img src="img/map-big.jpg" width="960" height="559" alt="Мы находимся по адресу улица Строителей д. 15">
   </section>
+
+  <script>
+    var link = document.querySelector(".write-us-button");
+    var popup = document.querySelector(".write-us");
+    var close = document.querySelector(".close-btn");
+    var form = popup.querySelector("form");
+    var writeusName = document.querySelector("[name=popup-name]");
+    var writeusEmail = document.querySelector("[name=popup-email]");
+    var writeusText = document.querySelector("[name=popup-text]");
+    var storage = "";
+
+    try {
+      storage = localStorage.getItem("writeusName");
+    } catch (err) {
+      isStorageSupport = false;
+    }
+
+    link.addEventListener("click", function (evt) {
+      evt.preventDefault();
+      popup.classList.add("write-us-show");
+
+      if (storage) {
+        writeusName.value = storage;
+        writeusEmail.focus();
+      } else {
+        writeusName.focus();
+      }
+    });
+
+    close.addEventListener("click", function (evt) {
+      evt.preventDefault();
+      popup.classList.remove("write-us-show");
+      popup.classList.remove("write-us-error");
+    });
+
+    form.addEventListener("submit", function (evt) {
+      if (!writeusName.value || !writeusEmail.value || !writeusText.value) {
+        evt.preventDefault();
+        popup.classList.remove("write-us-error");
+        popup.offsetWidth = popup.offsetWidth;
+        popup.classList.add("write-us-error");
+      } else {
+        if (isStorageSupport) {
+          localStorage.setItem("writeusName", writeusName.value);
+        }
+      }
+    });
+
+    window.addEventListener("keydown", function (evt) {
+      if (evt.keyCode === 27) {
+        evt.preventDefault();
+        if (popup.classList.contains("write-us-show")) {
+          popup.classList.remove("write-us-show");
+          popup.classList.remove("write-us-error");
+        }
+      }
+    });
+
+    var mapLink = document.querySelector(".contacts-map-btn");
+    var mapPopup = document.querySelector(".map");
+    var mapClose = mapPopup.querySelector(".close-btn");
+
+    mapLink.addEventListener("click",
+      function (evt) {
+        evt.preventDefault();
+        mapPopup.classList.add("map-show");
+      });
+
+    mapClose.addEventListener("click", function (evt) {
+      evt.preventDefault();
+      mapPopup.classList.remove("map-show");
+
+    });
+
+    window.addEventListener("keydown", function (evt) {
+      if (evt.keyCode === 27) {
+        evt.preventDefault();
+        if (mapPopup.classList.contains("map-show")) {
+          mapPopup.classList.remove("map-show");
+        }
+      }
+    });
+ </script>
+ 
 </body>
 
 </html>

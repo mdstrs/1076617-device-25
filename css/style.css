@@ -30,6 +30,45 @@
   url("../fonts/web/opensanslight.woff2");
 }
 
+@keyframes bounce {
+  0% {
+    transform: translateX(-2000px);
+  }
+
+  70% {
+    transform: translateX(40px);
+  }
+
+  90% {
+    transform: translateX(-20px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(-10px);
+  }
+}
 
 /*
   ==================
@@ -751,6 +790,7 @@ input[type="radio"].visually-hidden {
 }
 
 .catalog-form .btn {
+  width: 200px;
   margin-top: -10px;
 }
 
@@ -1135,11 +1175,21 @@ input[type="radio"].visually-hidden {
 }
 
 .catalog-pagination__list {
-  padding-top: 6px;
-  padding-right: 30px;
-  padding-left: 30px;
+  padding: 0;
 
   list-style: none;
+}
+
+.catalog-pagination .back {
+  margin-right: auto;
+  padding-top: 5px;
+  padding-left: 30px;
+}
+
+.catalog-pagination .next {
+  margin-left: auto;
+  padding-top: 5px;
+  padding-right: 28px;
 }
 
 .catalog-pagination__list a {
@@ -1293,9 +1343,9 @@ input[type="radio"].visually-hidden {
   display: none;
 }
 
-.product-1:checked + .slider-item:nth-child(1),
-.product-2:checked + .slider-item:nth-child(2),
-.product-3:checked + .slider-item:nth-child(3) {
+.product-1:checked ~ .slider-list .slider-item:nth-child(1),
+.product-2:checked ~ .slider-list .slider-item:nth-child(2),
+.product-3:checked ~ .slider-list .slider-item:nth-child(3) {
   display: flex;
 }
 
@@ -1315,6 +1365,8 @@ input[type="radio"].visually-hidden {
   transform: translateX(-50%);
 }
 
+
+
 .slider-controls label {
   display: block;
   width: 12px;
@@ -1324,9 +1376,13 @@ input[type="radio"].visually-hidden {
   background-image: url(../img/slider-button.svg);
 }
 
-#product-1:checked ~ .slider-controls .slider-controls-item--1,
-#product-2:checked ~ .slider-controls .slider-controls-item--2,
-#product-3:checked ~ .slider-controls .slider-controls-item--3 {
+.slider-controls label:hover {
+  cursor: pointer;
+}
+
+.product-1:checked ~ .slider-controls .slider-controls-item--1,
+.product-2:checked ~ .slider-controls .slider-controls-item--2,
+.product-3:checked ~ .slider-controls .slider-controls-item--3 {
   background-image: url(../img/slider-button-checked.svg);
 }
 
@@ -1673,6 +1729,10 @@ input[type="radio"].visually-hidden {
   border-right: 7px solid #000000;
 }
 
+.description-item {
+  display: none;
+}
+
 .services-check .btn {
   width: 160px;
   margin-bottom: 25px;
@@ -1687,38 +1747,15 @@ input[type="radio"].visually-hidden {
   padding-left: 24px;
 }
 
-.delivery-button:checked + .btn-1 {
-  padding-left: 19px;
-
-  text-align: left;
+.delivery-button:checked ~ .services-description .description-item:nth-child(1),
+.guarantee-button:checked ~ .services-description .description-item:nth-child(2),
+.credit-button:checked ~ .services-description .description-item:nth-child(3) {
+  display: block;
 }
 
-.guarantee-button:checked + .btn-2 {
-  padding-left: 24px;
-
-  text-align: left;
-}
-
-.credit-button:checked + .btn-3 {
-  text-align: left;
-}
-
-.delivery-button:checked + .btn,
-.guarantee-button:checked + .btn,
-.credit-button:checked + .btn {
-  width: 280px;
-
-  color: #f7e184;
-  letter-spacing: 3.6px;
-
-  background-color: #000000;
-
-  transition: width 0.5s;
-}
-
-.delivery-button:checked + .btn::before,
-.guarantee-button:checked + .btn::before,
-.credit-button:checked + .btn::before {
+.delivery-button:checked ~ .services-check .btn-1::before,
+.guarantee-button:checked ~ .services-check .btn-2::before,
+.credit-button:checked ~ .services-check .btn-3::before {
   content: "";
   position: absolute;
   top: 50%;
@@ -1733,12 +1770,45 @@ input[type="radio"].visually-hidden {
   transform: translate(-50%, -50%);
 }
 
+.delivery-button:checked ~ .services-check .btn-1,
+.guarantee-button:checked ~ .services-check .btn-2,
+.credit-button:checked ~ .services-check .btn-3 {
+  width: 280px;
+
+  color: #f7e184;
+  letter-spacing: 3.6px;
+
+  background-color: #000000;
+
+  transition: width 0.5s;
+}
+
+.delivery-button:checked ~ .services-check .btn-1 {
+  padding-left: 19px;
+
+  text-align: left;
+}
+
+.guarantee-button:checked ~ .services-check .btn-2 {
+  padding-left: 24px;
+
+  text-align: left;
+}
+
+.credit-button:checked ~ .services-check .btn-3 {
+  text-align: left;
+}
+
 /*
   ==================
   Услуги 
   Общиие стили слайдера
   ==================
   */
+.services-description {
+  margin-top: 1px;
+  margin-left: -40px;
+}
 
 .services-description h3 {
   margin-bottom: 30px;
@@ -1768,9 +1838,6 @@ input[type="radio"].visually-hidden {
   */
 
 
-.services .delivery {
-  display: block;
-}
 
 .services-description .delivery {
   position: relative;
@@ -1790,9 +1857,6 @@ input[type="radio"].visually-hidden {
   ==================
   */
 
-.services .guarantee {
-  display: none;
-}
 
 .services-description .guarantee::after {
   content: url(../img/guarantee.svg);
@@ -1808,9 +1872,6 @@ input[type="radio"].visually-hidden {
   ==================
   */
 
-.services .credit {
-  display: none;
-}
 
 .services-description .credit::after {
   content: url(../img/credit.svg);
@@ -2189,6 +2250,7 @@ input[type="radio"].visually-hidden {
 .footer-copyright {
   display: flex;
   justify-content: flex-end;
+  padding-bottom: 45px;
 }
 
 .social-button-list {
@@ -2232,10 +2294,11 @@ input[type="radio"].visually-hidden {
   ==================
   */
 
+
 .write-us {
   position: fixed;
-  top: 200px;
-  left: 300px;
+  top: 80px;
+  left: 280px;
   z-index: 2;
 
   display: none;
@@ -2243,6 +2306,18 @@ input[type="radio"].visually-hidden {
   margin: 0 auto;
 
   background-color: #ffffff;
+  box-shadow: 0 10px 20px 0 rgba(0,0,0,0.2);
+}
+
+
+.write-us-show {
+  display: flex;
+
+  animation: bounce 0.5s;
+}
+
+.write-us-error {
+  animation: shake 0.5s;
 }
 
 .write-us .container1 {
@@ -2262,6 +2337,8 @@ input[type="radio"].visually-hidden {
   flex-direction: column-reverse;
   padding-top: 10px;
 }
+
+
 
 .write-us label,
 .write-us-email label {
@@ -2286,6 +2363,18 @@ input[type="radio"].visually-hidden {
   border: none;
   border-bottom: 2px solid transparent;
   outline: none;
+  opacity: 0.5;
+}
+
+.write-us-name input[type="text"]:focus,
+.write-us-email input[type="email"]:focus {
+  background-color: #ffffff;
+  outline: 3px solid #f0c52e;
+}
+
+.write-us-name input[type="text"]:hover,
+.write-us-email input[type="email"]:hover {
+  opacity: 0.8;
 }
 
 .write-us-comment {
@@ -2315,11 +2404,21 @@ input[type="radio"].visually-hidden {
   border: none;
   border-bottom: 2px solid transparent;
   outline: none;
+  opacity: 0.5;
+}
+
+.write-us textarea:focus {
+  background-color: #ffffff;
+  outline: 3px solid #f0c52e;
+}
+
+.write-us textarea:hover {
+  opacity: 0.8;
 }
 
 .write-us .close-btn {
   position: relative;
-  top: 22px;
+  top: 10px;
   left: 783px;
 
   display: inline-block;
@@ -2332,13 +2431,16 @@ input[type="radio"].visually-hidden {
   cursor: pointer;
 }
 
+.write-us .close-btn:hover {
+  background-color: rgba(240, 197, 46, 1);
+}
+
 
 .write-us .close-btn::before,
 .write-us .close-btn::after {
   content: " ";
   position: absolute;
-  top: 20%;
-  left: 50%;
+  top: 14px;
 
   width: 1px;
   height: 30px;
@@ -2364,7 +2466,7 @@ input[type="radio"].visually-hidden {
 
   transform: rotate(-135deg);
 
-  transition: transform 1s,  background-color 0.75s;
+  transition: transform 0.3s,  background-color 0.45s;
 }
 
 .write-us .close-btn:hover:after {
@@ -2372,7 +2474,7 @@ input[type="radio"].visually-hidden {
 
   transform: rotate(135deg);
 
-  transition: transform 1s, background-color 0.75s;
+  transition: transform 0.3s, background-color 0.45s;
 }
 
 .write-us .btn {
@@ -2388,8 +2490,8 @@ input[type="radio"].visually-hidden {
 
 .map {
   position: fixed;
-  top: 50px;
-  left: 300px;
+  top: 30px;
+  left: 280px;
   z-index: 2;
 
   display: none;
@@ -2397,10 +2499,17 @@ input[type="radio"].visually-hidden {
   margin: 0 auto;
 }
 
+.map-show {
+  display: block;
+
+  animation: bounce 0.5s;
+}
+
 .map .close-btn {
   position: relative;
   top: 72px;
   left: 880px;
+  z-index: 3;
 
   display: inline-block;
   width: 55px;
@@ -2445,7 +2554,7 @@ input[type="radio"].visually-hidden {
 
   transform: rotate(-135deg);
 
-  transition: transform 1s,  background-color 0.75s;
+  transition: transform 0.3s,  background-color 0.75s;
 }
 
 .map .close-btn:hover:after {
@@ -2453,5 +2562,27 @@ input[type="radio"].visually-hidden {
 
   transform: rotate(135deg);
 
-  transition: transform 1s, background-color 0.75s;
+  transition: transform 0.3s, background-color 0.75s;
+}
+
+.contacts iframe,
+.map iframe {
+  position: relative;
+  z-index: 2;
+
+  border: none;
+}
+
+.contacts p {
+  margin: 0;
+  padding: 0;
+}
+
+.map img {
+  position: absolute;
+  top: 60px;
+  left: 0;
+  z-index: 1;
+
+  margin: 0;
 }
