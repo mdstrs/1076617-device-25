@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
   <title>HTML Academy: Девайс</title>
 </head>
 
@@ -76,61 +76,61 @@
           <h2 class="visually-hidden">Навигация по сайту</h2>
 
           <section class="navigation-catalog">
-              <div class="wrapper">
-                <h2 class="visually-hidden">Навигация по каталогу</h2>
-                <ul class="navigation-catalog-list">
-                  <li class="navigation-catalog-item"> <a href="#" class="catalog-link">Каталог товаров</a>
-                    <div class="submenu">
-  
-                      <ul class="col col-1">
-                        <li>
-                          <a href="#">Виртуальная реальность</a>
-                        </li>
-  
-                        <li>
-                          <a href="catalog.html">Моноподы для селфи</a>
-                        </li>
-  
-                        <li>
-                          <a href="#">Экшн-камеры</a>
-                        </li>
-                      </ul>
-  
-                      <ul class="col col-2">
-                        <li>
-                          <a href="#">Фитнес-браслеты</a>
-                        </li>
-  
-                        <li>
-                          <a href="#">Умные часы</a>
-                        </li>
-                      </ul>
-  
-                      <ul class="col col-3">
-                        <li>
-                          <a href="#">Квадрокоптеры</a>
-                        </li>
-                      </ul>
-                    </div>
-  
-                  </li>
-                </ul>
-  
-                <ul class="navigation-site header-navigation-site">
-                  <li>
-                    <a href="#">Доставка</a>
-                  </li>
-  
-                  <li>
-                    <a href="#">Гарантия</a>
-                  </li>
-                  <li>
-                    <a href="#">Контакты</a>
-                  </li>
-  
-                </ul>
-              </div>
-            </section>
+            <div class="wrapper">
+              <h2 class="visually-hidden">Навигация по каталогу</h2>
+              <ul class="navigation-catalog-list">
+                <li class="navigation-catalog-item"> <a href="#" class="catalog-link">Каталог товаров</a>
+                  <div class="submenu">
+
+                    <ul class="col col-1">
+                      <li>
+                        <a href="#">Виртуальная реальность</a>
+                      </li>
+
+                      <li>
+                        <a href="catalog.html">Моноподы для селфи</a>
+                      </li>
+
+                      <li>
+                        <a href="#">Экшн-камеры</a>
+                      </li>
+                    </ul>
+
+                    <ul class="col col-2">
+                      <li>
+                        <a href="#">Фитнес-браслеты</a>
+                      </li>
+
+                      <li>
+                        <a href="#">Умные часы</a>
+                      </li>
+                    </ul>
+
+                    <ul class="col col-3">
+                      <li>
+                        <a href="#">Квадрокоптеры</a>
+                      </li>
+                    </ul>
+                  </div>
+
+                </li>
+              </ul>
+
+              <ul class="navigation-site header-navigation-site">
+                <li>
+                  <a href="#">Доставка</a>
+                </li>
+
+                <li>
+                  <a href="#">Гарантия</a>
+                </li>
+                <li>
+                  <a href="#">Контакты</a>
+                </li>
+
+              </ul>
+            </div>
+          </section>
         </section>
         <!--Конец второго блока хедера-->
       </div>
@@ -162,12 +162,14 @@
       <div class="catalog-header">
         <div class="wrapper">
 
-          <h2 class="catalog-header__filter-title">Фильтр:</h2>
+          <div class="filter-header">
+            <h2 class="catalog-header__filter-title">Фильтр:</h2>
+          </div>
 
           <section class="catalog-sort">
             <h2 class="catalog-sort__title">Сортировка:</h2>
             <ul class="catalog-sort__list">
-              <li class="catalog-sort__item catalog-sort__item-current"><a>По цене</a></li>
+              <li class="catalog-sort__item catalog-sort__item-current">По цене</li>
               <li class="catalog-sort__item"><a href="#">По типу</a></li>
               <li class="catalog-sort__item"><a href="#">По популярности</a></li>
 
@@ -186,6 +188,7 @@
 
       <div class="catalog-main">
         <div class="wrapper">
+
           <aside class="catalog-form">
             <form method="get" action="https://echo.htmlacademy.ru">
               <section class="range-filter">
@@ -207,51 +210,49 @@
               <section class="catalog-form__colors">
                 <h3>Цвет</h3>
 
-                <label class="check option">
-                  <input type="checkbox" class="check__input visually-hidden" name="black-color" checked>
-                  <span class="check__box"></span>
-                  Черный
 
-                </label>
+                <ul class="form__colors-list">
 
-                <label class="check option">
-                  <input type="checkbox" class="check__input visually-hidden" name="white-color">
-                  <span class="check__box"></span>
-                  Белый
-                </label>
+                  <li class="form__colors-item">
+                    <input class="form__colors-input visually-hidden" id="filter-check-1" type="checkbox" name="black" checked>
+                    <label class="form__colors-label" for="filter-check-1">Черный</label>
+                  </li>
 
-                <label class="check option">
-                  <input type="checkbox" class="check__input visually-hidden" name="dark-blue-color" checked>
-                  <span class="check__box"></span>
-                  Синий
-                </label>
+                  <li class="form__colors-item">
+                    <input class="form__colors-input  visually-hidden" id="filter-check-2" type="checkbox" name="white">
+                    <label class="form__colors-label" for="filter-check-2">Белый</label>
+                  </li>
 
-                <label class="check option">
-                  <input type="checkbox" class="check__input visually-hidden" name="red-color" checked>
-                  <span class="check__box"></span>
-                  Красный
-                </label>
+                  <li class="form__colors-item">
+                    <input class="form__colors-input  visually-hidden" id="filter-check-3" type="checkbox" name="blue" checked>
+                    <label class="form__colors-label" for="filter-check-3">Синий</label>
+                  </li>
 
-                <label class="check option">
-                  <input type="checkbox" class="check__input visually-hidden" name="pink-color">
-                  <span class="check__box"></span>
-                  Розовый
-                </label>
+                  <li class="form__colors-item">
+                    <input class="form__colors-input  visually-hidden" id="filter-check-4" type="checkbox" name="red" checked>
+                    <label class="form__colors-label" for="filter-check-4">Красный</label>
+                  </li>
+
+                  <li class="form__colors-item">
+                    <input class="form__colors-input  visually-hidden" id="filter-check-5" type="checkbox" name="pink">
+                    <label class="form__colors-label" for="filter-check-5">Розовый</label>
+                  </li>
+                  
+                </ul>
               </section>
 
               <section class="catalog-form__options">
                 <h3>Bluetooth</h3>
-                <label class="radio option">
-                  <input type="radio" class="radio__input visually-hidden" name="availability" checked>
-                  <span class="radio__box"></span>
-                  Есть
-                </label>
-
-                <label class="radio option">
-                  <input type="radio" class="radio__input visually-hidden" name="availability">
-                  <span class="radio__box"></span>
-                  Нет
-                </label>
+                <ul class="form__option-list">
+                  <li class="form__option-item">
+                    <input class="form__option-input  visually-hidden" id="filter-control-1" type="radio" name="bluetooth" value="yes" checked>
+                    <label class="form__option-label" for="filter-control-1">Есть</label>
+                  </li>
+                  <li class="form__option-item">
+                    <input class="form__option-input  visually-hidden" id="filter-control-2" type="radio" name="bluetooth" value="no">
+                    <label class="form__option-label" for="filter-control-2">Нет</label>
+                  </li>
+                </ul>
 
               </section>
 
@@ -342,29 +343,25 @@
 
             <section class="catalog-pagination">
               <h2 class="visually-hidden">Страницы</h2>
-              <ul class="catalog-pagination__list back">
+              <ul class="pagination-list">
                 <li>
-                  <a href="#">Назад</a>
+                  <a class="pagination__control  pagination__control--prev" href="#">Назад</a>
                 </li>
-              </ul>
-
-              <ul class="catalog-pagination__middle">
-                <li class="current">
-                  <a href="#">1</a>
+                <li class="pagination__list-wrap">
+                  <ul class="pagination__list">
+                    <li class="pagination__item  pagination__item--active">
+                      <a href="#">1</a>
+                    </li>
+                    <li class="pagination__item">
+                      <a href="#">2</a>
+                    </li>
+                    <li class="pagination__item">
+                      <a href="#">3</a>
+                    </li>
+                  </ul>
                 </li>
-
                 <li>
-                  <a href="#">2</a>
-                </li>
-
-                <li>
-                  <a href="#">3</a>
-                </li>
-              </ul>
-
-              <ul class="catalog-pagination__list next">
-                <li>
-                  <a href="#">Вперед</a>
+                  <a class="pagination__control  pagination__control--next" href="#">Вперед</a>
                 </li>
               </ul>
 
@@ -406,7 +403,7 @@
             </li>
 
             <li>
-              <a href="#">Выйти</a>
+              <a href="#" class="logout-link">Выйти</a>
             </li>
           </ul>
 
@@ -473,7 +470,7 @@
 
         <ul class="copyright-btn-list">
           <li>
-            <a href="https://htmlacademy.ru/profile/id1076617">
+            <a href="https://htmlacademy.ru/intensive/htmlcss">
               <span class="visually-hidden">HTML Academy</span>
               <svg xmlns="http://www.w3.org/2000/svg" fill="rgba(255, 198, 0, 1)" width="26.943" height="34.09"
                 viewBox="0 0 26.943 34.09">
